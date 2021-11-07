@@ -11,6 +11,8 @@ https://tubeme.acacha.org/tdd
 
 # Autor
 
-- Sergi Tur Badenas
+- Sergi Tur Badenas: https://acacha.github.io
 - Instagram: https://instagram.com/acacha_dev
 - Github: https://github.com/acacha
+
+![image](https://user-images.githubusercontent.com/4015406/140644527-e186bf90-e556-4970-98ed-3f00c5f1af11.png)
