@@ -20,6 +20,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/mockup', function () {
+    return view('video_mockup', [
+        'title' => 'Title',
+        'url' => 'https://www.youtube.com/embed/ofSbYUEml4c?controls=0',
+        'description' => 'DDESCRIPTION'
+    ]);
+});
+
 Route::get('/videos/{id}', [ VideosController::class,'show']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
