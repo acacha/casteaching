@@ -106,3 +106,20 @@ Dividers?
 # RESPONSIVE DESIGN
 - Lorem isum text llar a descriptión. Un title més realista
 - Centrar contingut? mx-auto
+
+
+# CRUD
+
+- No ha de ser public -> guest_users no han de tenir accés
+- Logged Users? Tampoc han de tenir accés -> només administradors
+- Authorization -> Permisos per administadors de videos
+- Superadministradors -> root -> Independentment dels permisos puguin realitzar qualsevol acció
+- URL SHOW -> /videos/1
+- URL -> /manage/videos
+- Controlador Model Vista: 
+- Controlador: VideosManageController
+- Model -> Video.php
+- Vista: videos.manage.index
+- Test: VideosManageControllerTest
+
+CRUD -> Controladors Resource Controllers
