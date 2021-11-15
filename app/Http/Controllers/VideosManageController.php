@@ -20,10 +20,10 @@ class VideosManageController extends Controller
         ]);
     }
 
-    public function create()
-    {
-        //
-    }
+//    public function create()
+//    {
+//        //
+//    }
 
     public function store(Request $request)
     {
