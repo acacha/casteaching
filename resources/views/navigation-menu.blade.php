@@ -23,6 +23,11 @@
                             {{ __('Manage Videos') }}
                         </x-jet-nav-link>
                     @endcan
+                    @can('users_manage_index')
+                        <x-jet-nav-link href="/manage/users" :active="request()->routeIs('manage.users')">
+                            {{ __('Manage Users') }}
+                        </x-jet-nav-link>
+                    @endcan
                 </div>
             </div>
 
@@ -168,6 +173,11 @@
             @can('videos_manage_index')
                 <x-jet-responsive-nav-link href="/manage/videos" :active="request()->routeIs('manage.videos')">
                     {{ __('Manage Videos') }}
+                </x-jet-responsive-nav-link>
+            @endcan
+            @can('users_manage_index')
+                <x-jet-responsive-nav-link href="/manage/users" :active="request()->routeIs('manage.users')">
+                    {{ __('Manage Users') }}
                 </x-jet-responsive-nav-link>
             @endcan
         </div>

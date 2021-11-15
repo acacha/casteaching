@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Video;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Tests\Feature\Videos\VideosManageControllerTest;
+use Tests\Feature\Users\UsersManageControllerTest;
 
-class VideosManageController extends Controller
+class UsersManageController extends Controller
 {
     public static function testedBy()
     {
-        return VideosManageControllerTest::class;
+        return UsersManageControllerTest::class;
     }
 
     public function index()
     {
-        return view('videos.manage.index',[
-            'videos' => Video::all()
+        return view('users.manage.index',[
+            'users' => User::all()
         ]);
     }
 
@@ -30,27 +30,21 @@ class VideosManageController extends Controller
         //
     }
 
-    /** R-> NO LLISTA -> Individual ->
-     */
     public function show($id)
     {
         //
     }
 
-    /** U -> update - > Form */
     public function edit($id)
     {
         //
     }
 
-    /** U -> update - > Processarà el Form i guardara las modificacions */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /** D -> DELETE
-     */
     public function destroy($id)
     {
         //
