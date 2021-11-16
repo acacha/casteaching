@@ -131,3 +131,31 @@ CRUD -> Controladors Resource Controllers
 - Zebra: Even row amb Laravel
 - type="text" per evitar error no surt focus indigo correcte
 - Menu de navegació en medium
+
+# Testos published 
+
+- Scopes
+- Unit test -> methods publish -> unpublish
+
+# Eloquent Relacions
+- Relació 1 a n -> Series i videos
+- TDD, test units de series i videos per definir les relacions
+
+# Exercici Crud de series
+
+Serie:
+- title: Nom de la sèrie
+- description: nullable
+- media: imatge de la sèrie
+
+Branca series -> Acabar fent merge a main amb la solució
+
+# TODOS
+
+- Explicar alpine-js que està instal·lat de serie i utilitzem al component x-status
+- Eines per a depurar la sessió : Laravel Debugbar i Laravel Telescope
+- Components predefinits Laravel Livewire -> aplicació exemples Laravel livewire
+- Even rows -> https://laravel.com/docs/8.x/blade#loops
+- $loop->last  | $loop->first | $loop->even | $loop->odd
+
+## DESCRIPTION / MARKDOWN EDITOR / TEXTAREA EDITOR amb suport per markdown
