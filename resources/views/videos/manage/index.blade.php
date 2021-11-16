@@ -2,8 +2,38 @@
 
     <div class="flex flex-col mt-10">
 
+        @if(session()->has('status'))
+            <div class="rounded-md bg-green-50 p-4">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <!-- Heroicon name: solid/check-circle -->
+                    <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm font-medium text-green-800">
+                        Successfully created
+                    </p>
+                </div>
+                <div class="ml-auto pl-3">
+                    <div class="-mx-1.5 -my-1.5">
+                        <button type="button" class="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600">
+                            <span class="sr-only">Dismiss</span>
+                            <!-- Heroicon name: solid/x -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+
         @can('videos_manage_create')
-            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <!-- This example requires Tailwind CSS v2.0+ -->
+                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                     <div class="p-4">
                             <div class="md:grid md:grid-cols-3 md:gap-6">
@@ -17,6 +47,7 @@
                                 </div>
                                 <div class="mt-5 md:mt-0 md:col-span-2">
                                     <form data-qa="form_video_create" action="#" method="POST" >
+                                        @csrf
                                         <div class="shadow sm:rounded-md sm:overflow-hidden">
                                             <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
 
@@ -25,7 +56,7 @@
                                                         Title
                                                     </label>
                                                     <div class="mt-1">
-                                                        <input id="title" name="title" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-2" placeholder="Titol del vídeo"></input>
+                                                        <input required id="title" name="title" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-2" placeholder="Titol del vídeo"></input>
                                                     </div>
                                                     <p class="mt-2 text-sm text-gray-500">
                                                         Titol curt del nostre vídeo
@@ -33,11 +64,11 @@
                                                 </div>
 
                                                 <div>
-                                                    <label for="about" class="block text-sm font-medium text-gray-700">
+                                                    <label for="description" class="block text-sm font-medium text-gray-700">
                                                         Description
                                                     </label>
                                                     <div class="mt-1">
-                                                        <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Description"></textarea>
+                                                        <textarea required id="description" name="description" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Description"></textarea>
                                                     </div>
                                                     <p class="mt-2 text-sm text-gray-500">
                                                         Brief description for your profile. URLs are hyperlinked.
@@ -53,7 +84,7 @@
                   <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
                     http://
                   </span>
-                                                            <input type="text" name="url" id="url" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="youtube.com/">
+                                                            <input required type="url" name="url" id="url" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="youtube.com/">
                                                         </div>
                                                     </div>
                                                 </div>
