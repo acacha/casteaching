@@ -123,3 +123,11 @@ Dividers?
 - Test: VideosManageControllerTest
 
 CRUD -> Controladors Resource Controllers
+
+# Detalls a polir UI
+
+- Marge del formulari de creació card en mobile -> Eliminar div extra amb un p-4 de padding
+- bg-white a tot el formulari
+- Zebra: Even row amb Laravel
+- type="text" per evitar error no surt focus indigo correcte
+- Menu de navegació en medium
