@@ -11,28 +11,25 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 md:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="/videos/1">
-                        {{ __('Videos 1') }}
-                    </x-jet-nav-link>
                     @can('videos_manage_index')
                         <x-jet-nav-link href="/manage/videos" :active="request()->routeIs('manage.videos')">
-                            {{ __('Manage Videos') }}
+                            {{ __('Videos') }}
                         </x-jet-nav-link>
                     @endcan
                     @can('users_manage_index')
                         <x-jet-nav-link href="/manage/users" :active="request()->routeIs('manage.users')">
-                            {{ __('Manage Users') }}
+                            {{ __('Users') }}
                         </x-jet-nav-link>
                     @endcan
                 </div>
             </div>
 
             @if(Auth::check())
-                <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="hidden md:flex sm:items-center sm:ml-6">
                     <!-- Teams Dropdown -->
                     @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                         <div class="ml-3 relative">
@@ -150,7 +147,7 @@
 
 
             <!-- Hamburger -->
-            <div class="-mr-2 flex items-center sm:hidden">
+            <div class="-mr-2 flex items-center md:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -162,22 +159,19 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden md:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="/videos/1">
-                {{ __('Videos 1') }}
-            </x-jet-responsive-nav-link>
             @can('videos_manage_index')
                 <x-jet-responsive-nav-link href="/manage/videos" :active="request()->routeIs('manage.videos')">
-                    {{ __('Manage Videos') }}
+                    {{ __('Videos') }}
                 </x-jet-responsive-nav-link>
             @endcan
             @can('users_manage_index')
                 <x-jet-responsive-nav-link href="/manage/users" :active="request()->routeIs('manage.users')">
-                    {{ __('Manage Users') }}
+                    {{ __('Users') }}
                 </x-jet-responsive-nav-link>
             @endcan
         </div>
