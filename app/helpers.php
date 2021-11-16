@@ -85,7 +85,13 @@ if (! function_exists('create_user_manager_user')) {
         ]);
 
         Permission::create(['name' => 'users_manage_index']);
+        Permission::create(['name' => 'users_manage_create']);
+        Permission::create(['name' => 'users_manage_store']);
+        Permission::create(['name' => 'users_manage_destroy']);
         $user->givePermissionTo('users_manage_index');
+        $user->givePermissionTo('users_manage_create');
+        $user->givePermissionTo('users_manage_store');
+        $user->givePermissionTo('users_manage_destroy');
 
         add_personal_team($user);
         return $user;
