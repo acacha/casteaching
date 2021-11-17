@@ -22,7 +22,11 @@ https://tubeme.acacha.org/tdd
 
 # Codi font dels alumnes
 
+- Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
+
 # Projectes en explotació dels alumnes
+
+- Tur Badenas, Sergi: Alumne DAM Prova: http://casteaching.alumnedam.me/
 
 # 109 Feature UI -> Vista mostrar video
 
