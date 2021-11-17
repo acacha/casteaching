@@ -211,3 +211,11 @@ CTA
 - [X] Even rows -> https://laravel.com/docs/8.x/blade#loops | $loop->last  | $loop->first | $loop->even | $loop->odd
 
 ## DESCRIPTION / MARKDOWN EDITOR / TEXTAREA EDITOR amb suport per markdown
+
+## API
+
+- Insights i prova script deploy.sh
+- Exemple de treball amb branca Creem branca apis i fem merge només quan estigui ok
+- Començar per mètode SHOW
+- Ja posats fem tota la api que no es complexa
+- Proposta api per a series -> TDD -> Us dono els testos (especificació) i genereu el codi
