@@ -195,6 +195,7 @@ CTA
 
 # TODOS
 
+- [ ] Petites millores -> Marcar al editar videos http://casteaching.test/manage/videos/1 al menu de navegació que encara estem a videos
 - [ ] Internacionalització
 - [ ] Topics/Tags -> Per etiquetar videos i series -> Relació polimorfica
 - [ ] Edit d'usuaris igual que amb videos -> Proposta d'exercici i donar resultat als alumnes
