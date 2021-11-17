@@ -1,5 +1,8 @@
 ![image](https://user-images.githubusercontent.com/4015406/139868670-5d6179cd-6ddd-4c2e-836d-afbc4bfac424.png)
 
+# Projecte en producció
+
+https://casteaching.alumnedam.me
 
 # Notes markdown
 
@@ -16,6 +19,10 @@ https://tubeme.acacha.org/tdd
 - Github: https://github.com/acacha
 
 ![image](https://user-images.githubusercontent.com/4015406/140644527-e186bf90-e556-4970-98ed-3f00c5f1af11.png)
+
+# Codi font dels alumnes
+
+# Projectes en explotació dels alumnes
 
 # 109 Feature UI -> Vista mostrar video
 
@@ -131,3 +138,84 @@ CRUD -> Controladors Resource Controllers
 - Zebra: Even row amb Laravel
 - type="text" per evitar error no surt focus indigo correcte
 - Menu de navegació en medium
+
+# Testos published 
+
+- Scopes
+- Unit test -> methods publish -> unpublish
+
+# Eloquent Relacions
+- Relació 1 a n -> Series i videos
+- TDD, test units de series i videos per definir les relacions
+
+# Exercici Crud de series
+
+Fer-ho en una branca
+Serie:
+- title: Nom de la sèrie
+- description: nullable
+- media: imatge de la sèrie
+
+Branca series -> Acabar fent merge a main amb la solució
+
+# DDD (Domain Driven Design) i focusing on the value
+
+Dashboard
+- Info específica de l'usuari? TODO -> Treure de moment o desactivar pq no ho tenim implementat
+
+Landing Page:
+- Dos vistes -> Usuari logat o usuari no logat -> canvia el CTA
+- Utilitzar TailwindUI per formatar la pàgina però les idees extretes de Laracasts
+
+CTAs Browse series
+- Mostrar un grid de series, ordenades per les més recents a dalt de tot
+- Registrar-se (només usuari no logat)
+
+Altres:
+- Browse de vídeos
+
+CTA
+- 
+
+# UI TODO
+
+- Landing Page
+  - CTA -> Browse series
+  - STATS -> Número de vídeos | Hores totals d'aprenentatge | Numero de series
+  - Features section amb les series destacades
+  - Part de recomanacions altres usuaris
+  - Part de preus de l'aplicació
+  - Part sobre l'autor
+  - Mailing List -> Casteaching news
+  - Peu de pàgina amb Facebook, instagram, etc
+  - Link a privacy i terms, Partners i webs amigues -> xarxes socials
+- Spinners de processament
+- Zero State Quan no hi ha cap vídeo que mostrar a la taula -> Comprovar no hi ha errors
+- Responsive Design per a taules: Cards apilades
+
+# TODOS
+
+- [ ] Internacionalització
+- [ ] Topics/Tags -> Per etiquetar videos i series -> Relació polimorfica
+- [ ] Edit d'usuaris igual que amb videos -> Proposta d'exercici i donar resultat als alumnes
+- [ ] Vídeo explicant pull requests -> Editar el fitxer README de acacha/casteaching per afegir els links a explotació i elns links codi font
+- [ ] API
+- [ ] Published i scopes
+- [ ] Branca de series -> CRUD de series sense la relació 1 a n amb Videos
+- [ ] Explicar scripts de bash -> deploy.sh | tubeme.sh | Altres
+- [ ] Components predefinits Laravel Livewire -> aplicació exemples Laravel livewire
+- [ ] Component Markdown Editor per a descripció
+- [ ] Un altre opció pot ser utilitzar un GIST o MD de Github com a font
+- [X] Explicar alpine-js que està instal·lat de serie i utilitzem al component x-status
+- [X] Eines per a depurar la sessió i altres amb Laravel: Laravel Debugbar i Laravel Telescope
+- [X] Even rows -> https://laravel.com/docs/8.x/blade#loops | $loop->last  | $loop->first | $loop->even | $loop->odd
+
+## DESCRIPTION / MARKDOWN EDITOR / TEXTAREA EDITOR amb suport per markdown
+
+## API
+
+- Insights i prova script deploy.sh
+- Exemple de treball amb branca Creem branca apis i fem merge només quan estigui ok
+- Començar per mètode SHOW
+- Ja posats fem tota la api que no es complexa
+- Proposta api per a series -> TDD -> Us dono els testos (especificació) i genereu el codi
