@@ -1,6 +1,6 @@
 {
   "name": "casteaching",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript package for casteaching API",
   "main": "index.js",
   "scripts": {
