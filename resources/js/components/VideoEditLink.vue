@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: "VideoShowLink",
+    name: "VideoEditLink",
     props: {
         video: {
             type: Object,

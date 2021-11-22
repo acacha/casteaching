@@ -5,7 +5,7 @@
 
 <script>
 export default {
-    name: "VideoShowLink",
+    name: "VideoDestroyLink",
     props: {
         video: {
             type: Object,
@@ -14,7 +14,14 @@ export default {
     },
     methods: {
         async remove() {
-            await window.casteaching.video.destroy(this.video.id)
+            try {
+                await window.casteaching.video.destroy(this.video.id)
+                this.$emit('removed')
+            } catch (error) {
+                console.log(error);
+            }
+
+
         }
     }
 }
