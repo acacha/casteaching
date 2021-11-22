@@ -42,4 +42,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         ->name('manage.users');
     Route::post('/manage/users',[ UsersManageController::class,'store' ])->middleware(['can:users_manage_store']);
     Route::delete('/manage/users/{id}',[ UsersManageController::class,'destroy' ])->middleware(['can:users_manage_destroy']);
+
+
+    Route::get('/vue/manage/videos',function () {
+        return view('casteaching_package');
+    });
 });
+
+
+
