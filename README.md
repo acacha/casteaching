@@ -28,6 +28,10 @@ https://tubeme.acacha.org/tdd
 
 - Tur Badenas, Sergi: Alumne DAM Prova: http://casteaching.alumnedam.me/
 
+# Versió de l'aplicació per a mòbils
+
+- Ionic casteaching: https://github.com/acacha/casteachingIonic
+
 # 109 Feature UI -> Vista mostrar video
 
 STARTING FROM SCRATCH
