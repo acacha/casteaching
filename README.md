@@ -215,8 +215,36 @@ CTA
 
 ## API
 
+Videos 124 i 125.
+
 - Insights i prova script deploy.sh
 - Exemple de treball amb branca Creem branca apis i fem merge només quan estigui ok
 - Començar per mètode SHOW
 - Ja posats fem tota la api que no es complexa
 - Proposta api per a series -> TDD -> Us dono els testos (especificació) i genereu el codi
+
+# Video 126
+
+TODO grabar un vídeos explicant cap a on tirar
+
+On anar partir d'aquí:
+
+- Video 127 i seguents: TDD amb Laravel (web PHP pur i Laravel Blade) però també Laravel Livewire
+- Aplicacions multiplataforma
+  - Contingut Previ: creació d'un paquet Javascript -> Service accés api REST amb Axios.
+  - Mobile APP amb Ionic + API REST CASTEACHING: sèrie Ionic casteaching
+  - Android App -> TODO
+  - Laravel amb Vue
+
+# CASTEACHING JAVASCRIPT LIBRARY
+
+https://tubeme.acacha.org/llibreria_javascript
+
+Després dels vídeos 124 i 125 -> Llibreria Javascript -> Paquet a part -Submodules
+
+101:
+- Explicació del que volem fer
+- Documentació API.md
+
+## VUE dins de la branca API
+Exemple de com utilitza API amb Vue dins de Laravel
