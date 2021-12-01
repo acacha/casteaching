@@ -12,6 +12,11 @@ Més info a: https://github.com/acacha/wiki/blob/main/casteaching.md
 
 https://tubeme.acacha.org/tdd
 
+# Projectes relacionats/Germans
+
+- Javascript Package casteaching: https://tubeme.acacha.org/javascript_package
+- Casteaching Ionic: Versió amb frontend Ionic (app multiplataforma incloent versió Android) https://tubeme.acacha.org/ionic_realworld
+
 # Autor
 
 - Sergi Tur Badenas: https://acacha.github.io
