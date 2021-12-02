@@ -28,10 +28,12 @@ https://tubeme.acacha.org/tdd
 # Codi font dels alumnes
 
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
+- Moreno Giraldo, Jhon: Jhon1348: https://github.com/Jhon1348/casteaching
 
 # Projectes en explotació dels alumnes
 
 - Tur Badenas, Sergi: Alumne DAM Prova: http://casteaching.alumnedam.me/
+- Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
 
 # Versió de l'aplicació per a mòbils
 
