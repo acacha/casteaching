@@ -260,7 +260,7 @@ MP7
 
 MP8 Desenvolupaments aplicacions mòbils:
 - Aprendre Vue
-
+- Ionic + Vue. Creació aplicacions multiplataforma reals amb Laravel API REST
 
 MP9 Seguretat i Processos
 - Coneixements previs: Laravel Security
@@ -273,7 +273,7 @@ Autenticació en Frontend:
 2) PATH|Camí a seguir
 
 MP7
-- En tots els cursos utilitzem User Interface i aprenem components Laravel Blade + Tailwind CSSÇ/Tailwind UI i components dispositius mòbils amb Ionic
+- En tots els cursos utilitzem User Interface i aprenem components Laravel Blade + Tailwind CSS/Tailwind UI i components dispositius mòbils amb Ionic
 - Com crear un paquet Javascript: https://tubeme.acacha.org/javascript_package
   - Excusa per practicar Vue (interessant haver fet abans curs intro Vue 3) i començar tema processos amb programació concurrent/asíncrona de Javascript 
   - Excusa per aprendre Clients HTTP: XHR/Fetch/Axios
