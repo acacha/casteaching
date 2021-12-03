@@ -28,10 +28,12 @@ https://tubeme.acacha.org/tdd
 # Codi font dels alumnes
 
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
+- Audí Bielsa, Daniel: https://github.com/daudi44/casteaching
 
 # Projectes en explotació dels alumnes
 
 - Tur Badenas, Sergi: Alumne DAM Prova: http://casteaching.alumnedam.me/
+- Audí Bielsa, Daniel: http://casteaching.danielaudibielsa.codes/
 
 # Versió de l'aplicació per a mòbils
 
