@@ -34,19 +34,11 @@ class VideosManageController extends Controller
 
     }
 
-    /** R-> NO LLISTA -> Individual ->
-     */
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         return view('videos.manage.edit',['video' => Video::findOrFail($id) ]);
     }
 
-    /** U -> update - > Processarà el Form i guardara las modificacions */
     public function update(Request $request, $id)
     {
         $video = Video::findOrFail($id);
