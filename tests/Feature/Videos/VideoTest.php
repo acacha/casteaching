@@ -2,10 +2,13 @@
 
 namespace Tests\Feature\Videos;
 
+use App\Models\User;
 use App\Models\Video;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Hash;
+use Tests\Feature\Traits\CanLogin;
 use Tests\TestCase;
 
 /**
@@ -13,22 +16,14 @@ use Tests\TestCase;
  */
 class VideoTest extends TestCase
 {
-    use RefreshDatabase;        // ESTAT PRECONEGUT -> ZERO STATE
+    use RefreshDatabase, CanLogin;        // ESTAT PRECONEGUT -> ZERO STATE
 
     /**
      * @test
      */
     public function users_can_view_videos()
     {
-        $video = Video::create([
-                'title' => 'Ubuntu 101',
-                'description' => '# Here description',
-                'url' => 'https://youtu.be/w8j07_DBl_I',
-                'published_at' => Carbon::parse('December 13, 2020 8:00pm'),
-                'previous' => null,
-                'next' => null,
-                'series_id' => 1
-        ]);
+        $video = $this->createPublishedVideo();
 
         $response = $this->get('/videos/' . $video->id); // SLUGS -> SEO -> TODO
 
@@ -46,5 +41,128 @@ class VideoTest extends TestCase
     {
         $response = $this->get('/videos/999');
         $response->assertStatus(404);
+    }
+
+    /**
+     * @test
+     */
+    public function guest_user_cannot_view_unpublished_videos()
+    {
+        $video = $this->createUnpublishedVideo();
+
+        $response = $this->get('/videos/' . $video->id);
+
+        $response->assertStatus(404);
+
+    }
+
+    /**
+     * @test
+     */
+    public function regular_user_cannot_view_unpublished_videos()
+    {
+        $video = $this->createUnpublishedVideo();
+        $this->loginAsRegularUser();
+
+        $response = $this->get('/videos/' . $video->id);
+
+        $response->assertStatus(404);
+    }
+
+    /**
+     * @test
+     */
+    public function manager_can_view_unpublished_videos()
+    {
+        $video = $this->createUnpublishedVideo();
+        $this->loginAsVideoManager();
+
+        $response = $this->get('/videos/' . $video->id);
+
+        $response->assertSuccessful();
+    }
+
+    /**
+     * @test
+     */
+    public function owner_users_can_view_unpublished_videos()
+    {
+        $video = $this->createUnpublishedVideo();
+        $user = $this->loginAsRegularUser();
+
+        $video->user_id = $user->id;
+        $video->save();
+
+        $response = $this->get('/videos/' . $video->id);
+
+        $response->assertSuccessful();
+    }
+
+    /**
+     * @test
+     */
+    public function not_owner_users_cannot_view_unpublished_videos()
+    {
+        $video = $this->createUnpublishedVideo();
+        $loggedUser = $this->loginAsRegularUser();
+        $user2 = User::create([
+            'name' => 'Not Owner',
+            'email' => 'pepe@gmail.com',
+            'password' => Hash::make('12345678')
+        ]);
+
+        $video->user_id = $user2->id;
+        $video->save();
+
+        $response = $this->get('/videos/' . $video->id);
+
+        $response->assertStatus(404);
+    }
+
+    /**
+     * @test
+     */
+    public function superadmin_can_view_unpublished_videos()
+    {
+        $video = $this->createUnpublishedVideo();
+        $this->loginAsSuperAdmin();
+
+        $response = $this->get('/videos/' . $video->id);
+
+        $response->assertSuccessful();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function createPublishedVideo()
+    {
+        $video = Video::create([
+            'title' => 'Ubuntu 101',
+            'description' => '# Here description',
+            'url' => 'https://youtu.be/w8j07_DBl_I',
+            'published_at' => Carbon::parse('December 13, 2020 8:00pm'),
+            'previous' => null,
+            'next' => null,
+            'series_id' => 1
+        ]);
+        return $video;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function createUnPublishedVideo()
+    {
+        $video = Video::create([
+            'title' => 'Ubuntu 101',
+            'description' => '# Here description',
+            'url' => 'https://youtu.be/w8j07_DBl_I',
+            'published_at' => null,
+            'previous' => null,
+            'next' => null,
+            'series_id' => 1
+        ]);
+        return $video;
     }
 }
