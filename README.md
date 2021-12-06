@@ -29,12 +29,14 @@ https://tubeme.acacha.org/tdd
 
 - Audí Bielsa, Daniel: https://github.com/daudi44/casteaching
 - Moreno Giraldo, Jhon: Jhon1348: https://github.com/Jhon1348/casteaching
+- Pont Lopez, David: Palanka777: https://github.com/Palanka777/casteaching.git
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
 
 # Projectes en explotació dels alumnes
 
 - Audí Bielsa, Daniel: http://casteaching.danielaudibielsa.codes/
 - Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
+- Pont Lopez, David: Palanka777: http://casteaching.davidpont.me/
 - Tur Badenas, Sergi: Alumne DAM Prova: http://casteaching.alumnedam.me/
 
 # Versió de l'aplicació per a mòbils
