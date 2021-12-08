@@ -28,6 +28,7 @@ https://tubeme.acacha.org/tdd
 # Codi font dels alumnes
 
 - Audí Bielsa, Daniel: https://github.com/daudi44/casteaching
+- Avante Caballé, Marc: https://github.com/AvanteCaballe/casteaching
 - Brusca Manchón, Albert: https://github.com/Albert-Brusca/casteaching
 - Goncear, Tudor: https://github.com/tgoncear/casteaching
 - Moreno Giraldo, Jhon: Jhon1348: https://github.com/Jhon1348/casteaching
@@ -38,6 +39,7 @@ https://tubeme.acacha.org/tdd
 # Projectes en explotació dels alumnes
 
 - Audí Bielsa, Daniel: http://casteaching.danielaudibielsa.codes/
+- Avante Caballé, Marc: http://casteaching.marcavante.codes/
 - Brusca Manchón, Albert: http://casteaching.albertbrusca.me/
 - Goncear, Tudor: http://casteaching.tudorgoncear.me/ 
 - Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
