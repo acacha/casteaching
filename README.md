@@ -32,6 +32,7 @@ https://tubeme.acacha.org/tdd
 - Moreno Giraldo, Jhon: Jhon1348: https://github.com/Jhon1348/casteaching
 - Pont Lopez, David: Palanka777: https://github.com/Palanka777/casteaching.git
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
+- Brusca Manchón, Albert: https://github.com/Albert-Brusca/casteaching
 
 # Projectes en explotació dels alumnes
 
@@ -40,6 +41,7 @@ https://tubeme.acacha.org/tdd
 - Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
 - Pont Lopez, David: Palanka777: http://casteaching.davidpont.me/
 - Tur Badenas, Sergi: Alumne DAM Prova: http://casteaching.alumnedam.me/
+- Brusca Manchón, Albert: http://casteaching.albertbrusca.me/
 
 # Versió de l'aplicació per a mòbils
 
