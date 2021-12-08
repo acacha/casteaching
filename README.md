@@ -42,6 +42,7 @@ https://tubeme.acacha.org/tdd
 - Goncear, Tudor: http://casteaching.tudorgoncear.me/ 
 - Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
 - Pont Lopez, David: Palanka777: http://casteaching.davidpont.me/
+- Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
 - Tomas Altadill, Axel: AxelTomas99: http://casteaching.axeltomas.codes/
 
 
