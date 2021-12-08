@@ -28,6 +28,7 @@ https://tubeme.acacha.org/tdd
 # Codi font dels alumnes
 
 - Audí Bielsa, Daniel: https://github.com/daudi44/casteaching
+- Goncear, Tudor: https://github.com/tgoncear/casteaching
 - Moreno Giraldo, Jhon: Jhon1348: https://github.com/Jhon1348/casteaching
 - Pont Lopez, David: Palanka777: https://github.com/Palanka777/casteaching.git
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
@@ -35,6 +36,7 @@ https://tubeme.acacha.org/tdd
 # Projectes en explotació dels alumnes
 
 - Audí Bielsa, Daniel: http://casteaching.danielaudibielsa.codes/
+- Goncear, Tudor: http://casteaching.tudorgoncear.me/ 
 - Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
 - Pont Lopez, David: Palanka777: http://casteaching.davidpont.me/
 - Tur Badenas, Sergi: Alumne DAM Prova: http://casteaching.alumnedam.me/
