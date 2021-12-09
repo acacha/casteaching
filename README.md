@@ -34,6 +34,7 @@ https://tubeme.acacha.org/tdd
 - Moreno Giraldo, Jhon: Jhon1348: https://github.com/Jhon1348/casteaching
 - Pont Lopez, David: Palanka777: https://github.com/Palanka777/casteaching.git
 - Tomas Altadill, Axel: AxelTomas99: https://github.com/AxelTomas99/casteaching
+- Gabriel Urs. Gabriel: l3lackJack https://github.com/l3lackJack/casteaching
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
 
 
@@ -46,6 +47,7 @@ https://tubeme.acacha.org/tdd
 - Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
 - Pont Lopez, David: Palanka777: http://casteaching.davidpont.me/
 - Tomas Altadill, Axel: AxelTomas99: http://casteaching.axeltomas.codes/
+- Gabriel Urs, Gabriel: l3lackJack: http://casteaching.gabriel.alumnedam.me/
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
 
 # Versió de l'aplicació per a mòbils
