@@ -23,7 +23,7 @@ class Video extends Model
     // formatted_published_at accessor
     public function getFormattedPublishedAtAttribute()
     {
-        if(!$this->published_at) return '';
+        if(!$this->published) return '';
         $locale_date = $this->published_at->locale(config('app.locale'));
         return $locale_date->day . ' de ' . $locale_date->monthName . ' de ' . $locale_date->year;
     }
@@ -36,5 +36,10 @@ class Video extends Model
     public function getPublishedAtTimestampAttribute()
     {
         return optional($this->published_at)->timestamp;
+    }
+
+    public function getPublishedAttribute()
+    {
+        return !($this->published_at === null);
     }
 }
