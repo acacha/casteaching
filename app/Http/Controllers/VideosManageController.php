@@ -30,6 +30,18 @@ class VideosManageController extends Controller
 
         session()->flash('status', 'Successfully created');
 
+        // DISPARAR UN EVENT
+
+        // SOLID -> Open a Extension Closed to modification
+        //SMELL CODE
+//        codi que envia email
+//        codi que fa un Activity Log
+//        processar per reduir la seva mida
+//        asd
+//        asd
+//        asd
+//        asd
+
         return redirect()->route('manage.videos');
 
     }
