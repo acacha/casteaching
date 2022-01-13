@@ -12,6 +12,11 @@ Més info a: https://github.com/acacha/wiki/blob/main/casteaching.md
 
 https://tubeme.acacha.org/tdd
 
+# Projectes relacionats/Germans
+
+- Javascript Package casteaching: https://tubeme.acacha.org/javascript_package
+- Casteaching Ionic: Versió amb frontend Ionic (app multiplataforma incloent versió Android) https://tubeme.acacha.org/ionic_realworld
+
 # Autor
 
 - Sergi Tur Badenas: https://acacha.github.io
@@ -22,7 +27,36 @@ https://tubeme.acacha.org/tdd
 
 # Codi font dels alumnes
 
+- Audí Bielsa, Daniel: https://github.com/daudi44/casteaching
+- Avante Caballé, Marc: https://github.com/AvanteCaballe/casteaching
+- Brusca Manchón, Albert: https://github.com/Albert-Brusca/casteaching
+- Goncear, Tudor: https://github.com/tgoncear/casteaching
+- Moreno Giraldo, Jhon: Jhon1348: https://github.com/Jhon1348/casteaching
+- Muñoz Zafra, Ferran | https://github.com/Fmunozzafra/casteaching
+- Pont Lopez, David: Palanka777: https://github.com/Palanka777/casteaching.git
+- Rius Rivas, Alba: AlbaRiius: https://github.com/AlbaRiius/casteaching
+- Tomas Altadill, Axel: AxelTomas99: https://github.com/AxelTomas99/casteaching
+- Gabriel Urs. Gabriel: l3lackJack https://github.com/l3lackJack/casteaching
+- Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
+
+
 # Projectes en explotació dels alumnes
+
+- Audí Bielsa, Daniel: http://casteaching.danielaudibielsa.codes/
+- Avante Caballé, Marc: http://casteaching.marcavante.codes/
+- Brusca Manchón, Albert: http://casteaching.albertbrusca.me/
+- Goncear, Tudor: http://casteaching.tudorgoncear.me/ 
+- Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
+- Pont Lopez, David: Palanka777: http://casteaching.davidpont.me/
+- Rius Rivas, Alba: http://casteaching.albarius.codes/
+- Tomas Altadill, Axel: AxelTomas99: http://casteaching.axeltomas.codes/
+- Muñoz Zafra, Ferran | http://casteaching.ferranmunozzafra.me/
+- Urs, Gabriel: l3lackJack: http://casteaching.gabriel.alumnedam.me/
+- Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
+
+# Versió de l'aplicació per a mòbils
+
+- Ionic casteaching: https://github.com/acacha/casteachingIonic
 
 # 109 Feature UI -> Vista mostrar video
 
@@ -195,6 +229,7 @@ CTA
 
 # TODOS
 
+- [ ] Petites millores -> Marcar al editar videos http://casteaching.test/manage/videos/1 al menu de navegació que encara estem a videos
 - [ ] Internacionalització
 - [ ] Topics/Tags -> Per etiquetar videos i series -> Relació polimorfica
 - [ ] Edit d'usuaris igual que amb videos -> Proposta d'exercici i donar resultat als alumnes
@@ -214,8 +249,76 @@ CTA
 
 ## API
 
+Videos 124 i 125.
+
 - Insights i prova script deploy.sh
 - Exemple de treball amb branca Creem branca apis i fem merge només quan estigui ok
 - Començar per mètode SHOW
 - Ja posats fem tota la api que no es complexa
 - Proposta api per a series -> TDD -> Us dono els testos (especificació) i genereu el codi
+
+# Video 126
+
+TODO grabar un vídeos explicant cap a on tirar
+
+On anar partir d'aquí:
+
+- Video 127 i seguents: TDD amb Laravel (web PHP pur i Laravel Blade) però també Laravel Livewire
+- Aplicacions multiplataforma
+  - Contingut Previ: creació d'un paquet Javascript -> Service accés api REST amb Axios.
+  - Mobile APP amb Ionic + API REST CASTEACHING: sèrie Ionic casteaching
+  - Android App -> TODO
+  - Laravel amb Vue
+
+# CASTEACHING JAVASCRIPT LIBRARY
+
+https://tubeme.acacha.org/llibreria_javascript
+
+Després dels vídeos 124 i 125 -> Llibreria Javascript -> Paquet a part -Submodules
+
+101:
+- Explicació del que volem fer
+- Documentació API.md
+
+## VUE dins de la branca API
+Exemple de com utilitza API amb Vue dins de Laravel
+
+# 126
+
+Es tracta d'un "Glue video", pegamento per unir les múltiples peces que anem a crear. Us explico el que farem, a partir d'aquí seguim múltiples camins en paral·lel
+
+1) Objectius
+
+MP7
+- Aprendre ús de components UI amb Vue i Ionic. Component Laravel Blade
+
+MP8 Desenvolupaments aplicacions mòbils:
+- Aprendre Vue
+- Ionic + Vue. Creació aplicacions multiplataforma reals amb Laravel API REST
+
+MP9 Seguretat i Processos
+- Coneixements previs: Laravel Security
+- Aprendrem a utilitzar Tokens per accedir a APIS REst
+Autenticació en Frontend: 
+- Aplicacions SPA. Autenticació i Laravel Sanctum
+- Laravel Passport: Protocol autenticació i permisos Oauth
+- Social Login
+
+2) PATH|Camí a seguir
+
+MP7
+- En tots els cursos utilitzem User Interface i aprenem components Laravel Blade + Tailwind CSS/Tailwind UI i components dispositius mòbils amb Ionic
+- Com crear un paquet Javascript: https://tubeme.acacha.org/javascript_package
+  - Excusa per practicar Vue (interessant haver fet abans curs intro Vue 3) i començar tema processos amb programació concurrent/asíncrona de Javascript 
+  - Excusa per aprendre Clients HTTP: XHR/Fetch/Axios
+MP8 Desenvolupaments aplicacions mòbils:
+- Teoria: Fer el curs (no cal entregar res) sobre introducció a Vue de Vue Mastery
+  - https://www.vuemastery.com/courses/intro-to-vue-3 
+  - Opcionalment us ho podeu saltar o consultar els videos del curs quan tingueu dubtes i7o al final
+- Fer el curs IonicCasteaching: https://tubeme.acacha.org/ionic_realworld
+
+MP9 Seguretat i Processos
+- Coneixements previs: Sèrie. Laravel Security (prioritat baixa). Es tracta de teoria que podeu fer a posteriori o saltar-se
+- Programació asincrona (Procesos) amb Javascript. Primer vídeo de la serie explica que són els callbacks, les promeses y async/await amb Javascript https://tubeme.acacha.org/javascript_package 
+- TODO -> Videos IonicCasteaching sobre com fer el Login i la autenticació en aplicacions SPA
+- Continuació curs TDD

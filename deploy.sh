@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 git checkout production
-git merge main
+git merge main --no-edit
 git push origin production
 git checkout main
 
