@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Events\VideoCreated;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notification;
 use Tests\Feature\Videos\VideosManageControllerTest;
 
 class VideosManageController extends Controller
@@ -31,18 +32,12 @@ class VideosManageController extends Controller
 
         session()->flash('status', 'Successfully created');
 
-        // DISPARAR UN EVENT
-        VideoCreated::dispatch($video);
+        // SEND NOTIFICATION TO ADMINS
+        // Primer problema -> Codi no expressiu, caldria crear un mètode que permetes llegir el codi ->senNotificationToAdmins() -> Separació en mòduls
+        // Fins i tot podriem cridar a una classe/objecte extern que s'encarregues ell d'enviar la notificació -> Tindriem dos mòduls però OCO ACOPALTS
+        // Segon Problema -> La creació d'un vídeo (codi d'aquest controlador/mòdul) i l'enviament de la notificació són codis no separats en moduls
+        Notification::route('mail', config('casteaching.admins'))->notify(new \App\Notifications\VideoCreated($video));
 
-        // SOLID -> Open a Extension Closed to modification
-        //SMELL CODE
-//        codi que envia email
-//        codi que fa un Activity Log
-//        processar per reduir la seva mida
-//        asd
-//        asd
-//        asd
-//        asd
 
         return redirect()->route('manage.videos');
 
