@@ -7497,7 +7497,7 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
@@ -7509,62 +7509,70 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
- // TOKEN YSqXe8KJiHfx3Z9MGaoic0heLIZ0ifv9ZODV30r0
 
-var apiClient = axios__WEBPACK_IMPORTED_MODULE_1___default().create({
-  baseURL: "https://casteaching.test/api",
-  withCredentials: true,
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-    Authorization: 'Bearer YSqXe8KJiHfx3Z9MGaoic0heLIZ0ifv9ZODV30r0'
-  }
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  videos: function () {
-    var _videos = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-      var response;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return apiClient.get('/videos');
-
-            case 2:
-              response = _context.sent;
-              return _context.abrupt("return", response.data);
-
-            case 4:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-
-    function videos() {
-      return _videos.apply(this, arguments);
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(options) {
+  var apiClient = axios__WEBPACK_IMPORTED_MODULE_1___default().create({
+    baseURL: options && options.baseUrl || "https://casteaching.test/api",
+    withCredentials: true,
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
     }
-
-    return videos;
-  }(),
-  video: {
-    show: function () {
-      var _show = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(id) {
+  });
+  return {
+    token: null,
+    setToken: function setToken(token) {
+      this.token = token;
+      apiClient.defaults.headers.common['Authorization'] = 'Bearer ' + this.token;
+    },
+    videos: function () {
+      var _videos = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return apiClient.get('/videos');
+
+              case 2:
+                response = _context.sent;
+                return _context.abrupt("return", response.data);
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function videos() {
+        return _videos.apply(this, arguments);
+      }
+
+      return videos;
+    }(),
+    login: function () {
+      var _login = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(email, password, device_name) {
+        var postData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
-                return apiClient.get('/videos/' + id);
+                postData = {
+                  email: email,
+                  password: password,
+                  device_name: device_name
+                };
+                _context2.next = 3;
+                return apiClient.post('/sanctum/token', postData);
 
-              case 2:
+              case 3:
                 response = _context2.sent;
                 return _context2.abrupt("return", response.data);
 
-              case 4:
+              case 5:
               case "end":
                 return _context2.stop();
             }
@@ -7572,21 +7580,21 @@ var apiClient = axios__WEBPACK_IMPORTED_MODULE_1___default().create({
         }, _callee2);
       }));
 
-      function show(_x) {
-        return _show.apply(this, arguments);
+      function login(_x, _x2, _x3) {
+        return _login.apply(this, arguments);
       }
 
-      return show;
+      return login;
     }(),
-    create: function () {
-      var _create = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(data) {
+    user: function () {
+      var _user = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
                 _context3.next = 2;
-                return apiClient.post('/videos', data);
+                return apiClient.get('/user');
 
               case 2:
                 response = _context3.sent;
@@ -7600,70 +7608,128 @@ var apiClient = axios__WEBPACK_IMPORTED_MODULE_1___default().create({
         }, _callee3);
       }));
 
-      function create(_x2) {
-        return _create.apply(this, arguments);
+      function user() {
+        return _user.apply(this, arguments);
       }
 
-      return create;
+      return user;
     }(),
-    update: function () {
-      var _update = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(id, data) {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                _context4.next = 2;
-                return apiClient.put('/videos/' + id, data);
+    video: {
+      show: function () {
+        var _show = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(id) {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+            while (1) {
+              switch (_context4.prev = _context4.next) {
+                case 0:
+                  _context4.next = 2;
+                  return apiClient.get('/videos/' + id);
 
-              case 2:
-                response = _context4.sent;
-                return _context4.abrupt("return", response.data);
+                case 2:
+                  response = _context4.sent;
+                  return _context4.abrupt("return", response.data);
 
-              case 4:
-              case "end":
-                return _context4.stop();
+                case 4:
+                case "end":
+                  return _context4.stop();
+              }
             }
-          }
-        }, _callee4);
-      }));
+          }, _callee4);
+        }));
 
-      function update(_x3, _x4) {
-        return _update.apply(this, arguments);
-      }
+        function show(_x4) {
+          return _show.apply(this, arguments);
+        }
 
-      return update;
-    }(),
-    destroy: function () {
-      var _destroy = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(id) {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                _context5.next = 2;
-                return apiClient["delete"]('/videos/' + id);
+        return show;
+      }(),
+      create: function () {
+        var _create = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(data) {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
+            while (1) {
+              switch (_context5.prev = _context5.next) {
+                case 0:
+                  _context5.next = 2;
+                  return apiClient.post('/videos', data);
 
-              case 2:
-                response = _context5.sent;
-                return _context5.abrupt("return", response.data);
+                case 2:
+                  response = _context5.sent;
+                  return _context5.abrupt("return", response.data);
 
-              case 4:
-              case "end":
-                return _context5.stop();
+                case 4:
+                case "end":
+                  return _context5.stop();
+              }
             }
-          }
-        }, _callee5);
-      }));
+          }, _callee5);
+        }));
 
-      function destroy(_x5) {
-        return _destroy.apply(this, arguments);
-      }
+        function create(_x5) {
+          return _create.apply(this, arguments);
+        }
 
-      return destroy;
-    }()
-  }
-});
+        return create;
+      }(),
+      update: function () {
+        var _update = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(id, data) {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
+            while (1) {
+              switch (_context6.prev = _context6.next) {
+                case 0:
+                  _context6.next = 2;
+                  return apiClient.put('/videos/' + id, data);
+
+                case 2:
+                  response = _context6.sent;
+                  return _context6.abrupt("return", response.data);
+
+                case 4:
+                case "end":
+                  return _context6.stop();
+              }
+            }
+          }, _callee6);
+        }));
+
+        function update(_x6, _x7) {
+          return _update.apply(this, arguments);
+        }
+
+        return update;
+      }(),
+      destroy: function () {
+        var _destroy = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee7(id) {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee7$(_context7) {
+            while (1) {
+              switch (_context7.prev = _context7.next) {
+                case 0:
+                  _context7.next = 2;
+                  return apiClient["delete"]('/videos/' + id);
+
+                case 2:
+                  response = _context7.sent;
+                  return _context7.abrupt("return", response.data);
+
+                case 4:
+                case "end":
+                  return _context7.stop();
+              }
+            }
+          }, _callee7);
+        }));
+
+        function destroy(_x8) {
+          return _destroy.apply(this, arguments);
+        }
+
+        return destroy;
+      }()
+    }
+  };
+}
 
 /***/ }),
 
@@ -8221,7 +8287,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"];
-window.casteaching = _acacha_casteaching__WEBPACK_IMPORTED_MODULE_2__["default"];
+window.casteaching = (0,_acacha_casteaching__WEBPACK_IMPORTED_MODULE_2__["default"])();
 window.Vue = vue__WEBPACK_IMPORTED_MODULE_5__["default"];
 window.Vue.component('videos-list', _components_VideosList__WEBPACK_IMPORTED_MODULE_0__["default"]);
 window.Vue.component('video-form', _components_VideoForm__WEBPACK_IMPORTED_MODULE_3__["default"]);
