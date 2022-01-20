@@ -39,7 +39,6 @@ https://tubeme.acacha.org/tdd
 - Gabriel Urs. Gabriel: l3lackJack https://github.com/l3lackJack/casteaching
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
 
-
 # Projectes en explotació dels alumnes
 
 - Audí Bielsa, Daniel: http://casteaching.danielaudibielsa.codes/
