@@ -39,30 +39,6 @@ https://tubeme.acacha.org/tdd
 - Gabriel Urs. Gabriel: l3lackJack https://github.com/l3lackJack/casteaching
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
 
-# Com publicar els projectes?
-
-Similar a com vam fer amb el projecte ionic-comptador: https://www.youtube.com/watch?v=e03ea9TQ6lg&list=PLyasg1A0hpk0Z60Jg0kMpjP_Nw5ZTA7My&index=8
-
-Curs de vue mastery: https://www.vuemastery.com/courses/real-world-vue3/deploying-with-render/
-
-Aneu a render.com i entreu amb el vostre usuari de Github:
-
-- Feu click a botó New.
-- Escolliu new Web service
-- Poseu la URL de vostre projecte Github (és posible que tingueu que donar permisos o fer el projecte public)
-- Nom del projecte: CasteachingIonic (o quelcom similar identificatiu)
-- Environment: node
-- Region Frankfurt
-- branch: production
-
-Captura exemple:
-
-![image](https://user-images.githubusercontent.com/4015406/150360326-e1bbb091-68fa-4401-a4a6-646c0e35c4b3.png)
-
-
-Feu click a create new service.
-
-
 # Projectes en explotació dels alumnes
 
 - Audí Bielsa, Daniel: http://casteaching.danielaudibielsa.codes/
