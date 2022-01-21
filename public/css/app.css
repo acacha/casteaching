@@ -1442,6 +1442,9 @@ select {
 .mb-1 {
 	margin-bottom: 0.25rem;
 }
+.mt-12 {
+	margin-top: 3rem;
+}
 .block {
 	display: block;
 }
@@ -1495,6 +1498,12 @@ select {
 }
 .h-4\/5 {
 	height: 80%;
+}
+.h-1\/3 {
+	height: 33.333333%;
+}
+.h-48 {
+	height: 12rem;
 }
 .min-h-screen {
 	min-height: 100vh;
@@ -1561,6 +1570,12 @@ select {
 }
 .max-w-6xl {
 	max-width: 72rem;
+}
+.max-w-2xl {
+	max-width: 42rem;
+}
+.max-w-lg {
+	max-width: 32rem;
 }
 .flex-1 {
 	flex: 1 1 0%;
@@ -1663,6 +1678,11 @@ select {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+	margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
 	--tw-divide-y-reverse: 0;
@@ -1962,6 +1982,12 @@ select {
 .pt-8 {
 	padding-top: 2rem;
 }
+.pt-16 {
+	padding-top: 4rem;
+}
+.pb-20 {
+	padding-bottom: 5rem;
+}
 .text-left {
 	text-align: left;
 }
@@ -2016,6 +2042,9 @@ select {
 }
 .font-bold {
 	font-weight: 700;
+}
+.font-extrabold {
+	font-weight: 800;
 }
 .uppercase {
 	text-transform: uppercase;
@@ -2267,6 +2296,9 @@ select {
 	--tw-text-opacity: 1;
 	color: rgba(49, 46, 129, var(--tw-text-opacity));
 }
+.hover\:underline:hover {
+	text-decoration: underline;
+}
 .focus\:z-10:focus {
 	z-index: 10;
 }
@@ -2467,8 +2499,8 @@ select {
 		margin-left: 1.5rem;
 	}
 
-	.sm\:ml-0 {
-		margin-left: 0px;
+	.sm\:mt-4 {
+		margin-top: 1rem;
 	}
 
 	.sm\:block {
@@ -2487,8 +2519,8 @@ select {
 		height: 2.5rem;
 	}
 
-	.sm\:h-20 {
-		height: 5rem;
+	.sm\:h-2\/3 {
+		height: 66.666667%;
 	}
 
 	.sm\:w-10 {
@@ -2629,13 +2661,14 @@ select {
 		text-align: left;
 	}
 
-	.sm\:text-right {
-		text-align: right;
-	}
-
 	.sm\:text-sm {
 		font-size: 0.875rem;
 		line-height: 1.25rem;
+	}
+
+	.sm\:text-4xl {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
 	}
 
 	.sm\:text-3xl {
@@ -3355,6 +3388,14 @@ select {
 		margin-bottom: 1rem;
 	}
 
+	.lg\:max-w-none {
+		max-width: none;
+	}
+
+	.lg\:grid-cols-3 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
 	.lg\:p-5 {
 		padding: 1.25rem;
 	}
@@ -3362,6 +3403,14 @@ select {
 	.lg\:px-8 {
 		padding-left: 2rem;
 		padding-right: 2rem;
+	}
+
+	.lg\:pt-24 {
+		padding-top: 6rem;
+	}
+
+	.lg\:pb-28 {
+		padding-bottom: 7rem;
 	}
 }
 @media (min-width: 1280px) {
