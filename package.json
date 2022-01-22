@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "dependencies": {
-        "@acacha/casteaching": "file:./casteaching_package",
+        "@acacha/casteaching": "^1.0.10",
         "vue": "^2.6.14"
     },
     "devDependencies": {
