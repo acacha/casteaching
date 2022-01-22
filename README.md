@@ -321,3 +321,8 @@ MP9 Seguretat i Processos
 - Programació asincrona (Procesos) amb Javascript. Primer vídeo de la serie explica que són els callbacks, les promeses y async/await amb Javascript https://tubeme.acacha.org/javascript_package 
 - TODO -> Videos IonicCasteaching sobre com fer el Login i la autenticació en aplicacions SPA
 - Continuació curs TDD
+
+
+# Notes. Troubleshooting
+- Utilitzeu script de deployment Laravel Forge: https://gist.github.com/acacha/9bd560e39de2fcb6f3f9d9592f1fd58d
+- npm update i vigileu que estigueu utilitzatn la última versió del projecte casteaching_package
