@@ -37,4 +37,29 @@ class Video extends Model
     {
         return optional($this->published_at)->timestamp;
     }
+
+    public function serie()
+    {
+        return $this->belongsTo(Serie::class);
+    }
+
+    public function setSerie(Serie $serie)
+    {
+        $this->serie_id = $serie->id;
+        $this->save();
+        return $this;
+    }
+
+    public function setOwner(User $user)
+    {
+        $this->user_id = $user->id;
+        $this->save();
+        return $this;
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
+
