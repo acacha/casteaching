@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "dependencies": {
-        "@acacha/casteaching": "^1.0.10",
+        "@acacha/casteaching": "^1.0.11",
         "vue": "^2.6.14"
     },
     "devDependencies": {
