@@ -68,6 +68,18 @@
                                             </div>
 
 
+                                            <div class="grid grid-cols-3 gap-6">
+                                                <div class="col-span-3">
+                                                    <label for="url" class="block text-sm font-medium text-gray-700">
+                                                        Serie
+                                                    </label>
+                                                    <select id="serie" name="serie_id" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                        @foreach (App\Models\Serie::all() as $serie)
+                                                            <option value="{{ $serie->id }}"> {{ $serie->title }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
 
                                         </div>
                                         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -107,6 +119,9 @@
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     URL
                                 </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Serie
+                                </th>
                                 <th scope="col" class="relative px-6 py-3">
                                     <span class="sr-only">Actions</span>
                                 </th>
@@ -131,6 +146,9 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                         {{ $video->url }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        {{ optional($video->serie)->title }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="/videos/{{$video->id}}" target="_blank" class="text-indigo-600 hover:text-indigo-900">Show</a>
