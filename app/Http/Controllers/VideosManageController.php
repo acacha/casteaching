@@ -23,14 +23,18 @@ class VideosManageController extends Controller
 
     public function store(Request $request)
     {
-        // TODO -> Afegir validació
-
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'url' => 'required',
+        ]);
 
         $video = Video::create([
             'title' => $request->title,
             'description' => $request->description,
             'url' => $request->url,
-            'serie_id' => $request->serie_id
+            'serie_id' => $request->serie_id,
+            'user_id' => $request->user_id
         ]);
 
         session()->flash('status', 'Successfully created');
