@@ -16,6 +16,7 @@ class SeriesApiController extends Controller
     public function index()
     {
         return Serie::all();
+        //return Serie::with('videos')->get();
     }
 
     public function store(Request $request)
@@ -26,6 +27,8 @@ class SeriesApiController extends Controller
     public function show($id)
     {
         return Serie::findOrFail($id);
+//        return Serie::with('videos')->findOrFail($id);
+
     }
 
     public function update(Request $request, $id)
