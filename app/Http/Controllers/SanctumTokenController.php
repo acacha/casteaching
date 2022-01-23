@@ -19,7 +19,7 @@ class SanctumTokenController extends Controller
     public function __invoke(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'email' => 'required|email',
             'password' => 'required',
             'device_name' => 'required',
         ]);
