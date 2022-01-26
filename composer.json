@@ -13,6 +13,7 @@
         "laravel/framework": "^8.54",
         "laravel/jetstream": "^2.4",
         "laravel/sanctum": "^2.11",
+        "laravel/socialite": "^5.4",
         "laravel/telescope": "^4.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
@@ -66,7 +67,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
