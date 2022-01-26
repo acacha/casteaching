@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ba46df50b2f7c7d741c0f6c0814e654",
+    "content-hash": "bffdb4465551f6c3a222778c5f5d0c8a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1095,6 +1095,82 @@
                 }
             ],
             "time": "2021-04-26T11:24:25+00:00"
+        },
+        {
+            "name": "github-php/sponsors",
+            "version": "0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/github-php/sponsors.git",
+                "reference": "b280d05764fb6d8ded9bdcf52a4a8dde619f7274"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/github-php/sponsors/zipball/b280d05764fb6d8ded9bdcf52a4a8dde619f7274",
+                "reference": "b280d05764fb6d8ded9bdcf52a4a8dde619f7274",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0.1",
+                "illuminate/collections": "^8.0|^9.0",
+                "illuminate/http": "^8.0|^9.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0|^7.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "GitHubSponsors": "GitHub\\Sponsors\\Facades\\GitHubSponsors"
+                    },
+                    "providers": [
+                        "GitHub\\Sponsors\\GitHubSponsorsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GitHub\\Sponsors\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dries Vints",
+                    "homepage": "https://driesvints.com"
+                },
+                {
+                    "name": "Tom Witkowski",
+                    "homepage": "https://gummibeer.dev"
+                }
+            ],
+            "description": "A package for PHP to interact with GitHub Sponsors.",
+            "keywords": [
+                "github",
+                "laravel",
+                "sponsors"
+            ],
+            "support": {
+                "issues": "https://github.com/github-php/sponsors/issues",
+                "source": "https://github.com/github-php/sponsors"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Gummibeer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/driesvints",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-01-21T13:31:36+00:00"
         },
         {
             "name": "graham-campbell/result-type",

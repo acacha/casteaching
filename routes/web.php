@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
+use GitHub\Sponsors\Client;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,22 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::delete('/vue/manage/videos/{id}',[ VideosManageVueController::class,'destroy' ])->middleware(['can:videos_manage_destroy']);
     Route::get('/vue/manage/videos/{id}',[ VideosManageVueController::class,'edit' ])->middleware(['can:videos_manage_edit']);
     Route::put('/vue/manage/videos/{id}',[ VideosManageVueController::class,'update' ])->middleware(['can:videos_manage_update']);
+});
+
+Route::get('/github_sponsors', function () {
+    $client = app(Client::class);
+    dump($sponsors = $client->login('acacha')->sponsors());
+    foreach ($sponsors as $sponsor) {
+        dump($sponsor['avatarUrl']); // The sponsor's GitHub avatar url...
+        dump($sponsor['name']); // The sponsor's GitHub name...
+    }
+
+    dump($sponsors = $client->login('driesvints')->sponsors());
+    foreach ($sponsors as $sponsor) {
+        dump($sponsor);
+    }
+
+    dd($client->login('acacha')->isSponsoredBy('acacha'));
 });
 
 
