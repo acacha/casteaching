@@ -4,7 +4,12 @@ use App\Http\Controllers\UsersManageController;
 use App\Http\Controllers\VideosController;
 use App\Http\Controllers\VideosManageController;
 use App\Http\Controllers\VideosManageVueController;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
 
 /*
@@ -59,9 +64,44 @@ Route::get('/auth/redirect', function () {
 });
 
 Route::get('/auth/callback', function () {
-    dd(1);
-    $user = Socialite::driver('github')->user();
-    dd($user->token);
+    try {
+        $githubUser = Socialite::driver('github')->user();
+    } catch (\Exception $error) {
+        Log::debug($error);
+        return redirect('/login')->withErrors(['msg' => 'An Error occurred!' . $error->getMessage()]);
+    }
 
+    $user = User::where('github_id', $githubUser->id)->first();
+
+    if ($user) {
+        $user->github_token = $githubUser->token;
+        $user->github_refresh_token = $githubUser->refreshToken;
+        $user->github_nickname = $githubUser->nickname;
+        $user->github_avatar = $githubUser->avatar;
+        $user->save();
+    } else {
+        $user = User::where('email', $githubUser->email)->first();
+        if ($user) {
+            $user->github_id = $githubUser->id;
+            $user->github_nickname = $githubUser->nickname;
+            $user->github_avatar = $githubUser->avatar;
+            $user->github_token = $githubUser->token;
+            $user->github_refresh_token = $githubUser->refreshToken;
+            $user->save();
+        } else {
+            $user = User::create([
+                'name' => $githubUser->name,
+                'email' => $githubUser->email,
+                'password' => Hash::make(Str::random()),
+                'github_id' => $githubUser->id,
+                'github_token' => $githubUser->token,
+                'github_refresh_token' => $githubUser->refreshToken,
+            ]);
+        }
+    }
+
+    Auth::login($user);
+
+    return redirect('/dashboard');
 });
 
