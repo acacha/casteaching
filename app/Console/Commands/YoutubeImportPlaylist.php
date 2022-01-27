@@ -88,6 +88,9 @@ class YoutubeImportPlaylist extends Command
             $items = Youtube::getPlaylistItemsByPlaylistId($this->argument('playlistId'));
             $previous = null;
             foreach ($items['results'] as $item) {
+                if ($item->snippet->title === 'Deleted video') {
+                    continue;
+                }
                 $this->info($item->snippet->title);
                   // resourceId": {#2327 //    +"kind": "youtube#video" //    +"videoId
                   // ednlsVl-NHA
