@@ -84,10 +84,11 @@ Route::get('/auth/callback', function () {
     try {
         $githubUser = Socialite::driver('github')->user();
     } catch (\Exception $error) {
-        Log::debug($error);
+//        Log::debug($error);
         return redirect('/login')->withErrors(['msg' => 'An Error occurred!' . $error->getMessage()]);
     }
 
+//    $user = User::createUserFormGithub($githubUser);
     $user = User::where('github_id', $githubUser->id)->first();
 
     if ($user) {
