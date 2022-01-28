@@ -91,35 +91,35 @@ Route::get('/auth/callback', function () {
 //    $user = User::createUserFromGithub($githubUser);
     $user = User::where('github_id', $githubUser->id)->first();
 
-    if ($user) {
-        $user->github_token = $githubUser->token;
-        $user->github_refresh_token = $githubUser->refreshToken;
-        $user->github_nickname = $githubUser->nickname;
-        $user->github_avatar = $githubUser->avatar;
-        $user->save();
-        add_personal_team($user);
-    } else {
-        $user = User::where('email', $githubUser->email)->first();
-        if ($user) {
-            $user->github_id = $githubUser->id;
-            $user->github_nickname = $githubUser->nickname;
-            $user->github_avatar = $githubUser->avatar;
-            $user->github_token = $githubUser->token;
-            $user->github_refresh_token = $githubUser->refreshToken;
-            $user->save();
-        } else {
-            $user = User::create([
-                'name' => $githubUser->name,
-                'email' => $githubUser->email,
-                'password' => Hash::make(Str::random()),
-                'github_id' => $githubUser->id,
-                'github_token' => $githubUser->token,
-                'github_refresh_token' => $githubUser->refreshToken,
-            ]);
-        }
-    }
-
-    add_personal_team($user);
+//    if ($user) {
+//        $user->github_token = $githubUser->token;
+//        $user->github_refresh_token = $githubUser->refreshToken;
+//        $user->github_nickname = $githubUser->nickname;
+//        $user->github_avatar = $githubUser->avatar;
+//        $user->save();
+//        add_personal_team($user);
+//    } else {
+//        $user = User::where('email', $githubUser->email)->first();
+//        if ($user) {
+//            $user->github_id = $githubUser->id;
+//            $user->github_nickname = $githubUser->nickname;
+//            $user->github_avatar = $githubUser->avatar;
+//            $user->github_token = $githubUser->token;
+//            $user->github_refresh_token = $githubUser->refreshToken;
+//            $user->save();
+//        } else {
+//            $user = User::create([
+//                'name' => $githubUser->name,
+//                'email' => $githubUser->email,
+//                'password' => Hash::make(Str::random()),
+//                'github_id' => $githubUser->id,
+//                'github_token' => $githubUser->token,
+//                'github_refresh_token' => $githubUser->refreshToken,
+//            ]);
+//        }
+//    }
+//
+//    add_personal_team($user);
 
     Auth::login($user);
 

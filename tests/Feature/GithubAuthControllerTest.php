@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Laravel\Socialite\Facades\Socialite;
+use Mockery;
 use Tests\TestCase;
 
 /**
@@ -57,5 +58,30 @@ class GithubAuthControllerTest extends TestCase
 
         $this->assertAuthenticatedAs($user);
 
+    }
+
+    /** @test */
+    public function can_process_a_github_callback_with_mocks()
+    {
+        $this->withoutExceptionHandling();
+        $this->assertGuest($guard = null);
+
+        Socialite::shouldReceive('driver')
+            ->once()
+            ->with('github')
+            ->andReturn($driver = new GithubDriverMock());
+
+
+        // EXEMPLE -> Cal fer mock de tot -> Donarà error al intentar logar l'usuari
+//        Mockery::mock('App\Models\User')->shouldReceive('createUserFromGithub')
+//            ->once()
+//            ->with($driver->user())
+//            ->andReturn('prova');
+
+        $response = $this->get('/auth/callback');
+        $response->assertRedirect('dashboard');
+        $this->assertAuthenticated($guard = null);
+        $user = User::where(['email' => GithubDriverMock::EMAIL])->first();
+        $this->assertAuthenticatedAs($user);
     }
 }
