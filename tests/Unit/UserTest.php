@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Video;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
+use Tests\Feature\GithubDriverMock;
 use Tests\TestCase;
 
 class UserTest extends TestCase
@@ -46,5 +47,16 @@ class UserTest extends TestCase
         $user->addVideo($video);
         $this->assertCount(1,$user->refresh()->videos);
         $this->assertEquals($video->id,$user->videos[0]->id);
+    }
+
+    /** @test */
+    public function createUserFromGithub()
+    {
+        $user = User::createUserFromGithub((new GithubDriverMock())->user());
+
+        $this->assertEquals($user->name,GithubDriverMock::NAME);
+        $this->assertEquals($user->email,GithubDriverMock::EMAIL);
+        $this->assertEquals($user->github_id,GithubDriverMock::ID);
+//        dd($user);
     }
 }

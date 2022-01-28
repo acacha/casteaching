@@ -88,7 +88,7 @@ Route::get('/auth/callback', function () {
         return redirect('/login')->withErrors(['msg' => 'An Error occurred!' . $error->getMessage()]);
     }
 
-//    $user = User::createUserFormGithub($githubUser);
+//    $user = User::createUserFromGithub($githubUser);
     $user = User::where('github_id', $githubUser->id)->first();
 
     if ($user) {
@@ -97,6 +97,7 @@ Route::get('/auth/callback', function () {
         $user->github_nickname = $githubUser->nickname;
         $user->github_avatar = $githubUser->avatar;
         $user->save();
+        add_personal_team($user);
     } else {
         $user = User::where('email', $githubUser->email)->first();
         if ($user) {
@@ -117,6 +118,8 @@ Route::get('/auth/callback', function () {
             ]);
         }
     }
+
+    add_personal_team($user);
 
     Auth::login($user);
 
