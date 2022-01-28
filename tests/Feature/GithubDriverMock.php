@@ -84,6 +84,7 @@ class GithubDriverMock
         $user->id = GithubDriverMock::ID;
         $user->email = GithubDriverMock::EMAIL;
         $user->name = GithubDriverMock::NAME;
+        $user->avatar = GithubDriverMock::AVATAR;
         $user->nickname = GithubDriverMock::NICKNAME;
         $user->token = GithubDriverMock::TOKEN;
         $user->refreshToken = GithubDriverMock::REFRESH_TOKEN;
