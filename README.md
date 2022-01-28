@@ -57,6 +57,38 @@ https://tubeme.acacha.org/tdd
 
 - Ionic casteaching: https://github.com/acacha/casteachingIonic
 
+# Importador de Youtube
+
+A la branca Youtube (més endavant la integraré a main) hi ha una consola de Linux que importa tots els vídeos
+d'una playlist de Youtube a una sèrie de casteaching:
+
+```bash
+php artisan migrate:fresh --seed 
+php artisan youtube:import_playlist PLyasg1A0hpk07HA0VCApd4AGd3Xm45LQv
+```
+
+On PLyasg1A0hpk07HA0VCApd4AGd3Xm45LQv és el ID de la playlist per exemple la playlist TDD d'aquest curs
+
+``` 
+https://tubeme.acacha.org/tdd -> https://www.youtube.com/playlist?list=PLyasg1A0hpk07HA0VCApd4AGd3Xm45LQv
+```
+
+Per tal que funciona cal tenir una clau (API_TOKEN de Youtube) i posar-la al fitxer .env:
+
+```
+YOUTUBE_API_KEY=AIzaSyAjgegk07n8xaqwero8b0aFRoHA_r9ABRQ
+``
+
+S'utilitza el paquet https://github.com/alaouy/Youtube:
+
+```bash
+composer require alaouy/youtube
+``` 
+
+Per aconseguir la API de YOUTUBE:
+
+https://developers.google.com/youtube/registering_an_application
+
 # 109 Feature UI -> Vista mostrar video
 
 STARTING FROM SCRATCH
