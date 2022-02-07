@@ -93,6 +93,12 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'activations' => [
+            'provider' => 'users',
+            'table' => 'password_activations',
+            'expire' => 4320,
+            'throttle' => 60,
+        ],
     ],
 
     /*
