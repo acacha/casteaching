@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9742f63b64c70383f3cd347de2fd8fdd",
+    "content-hash": "8c35b885d4006e0190d108c96e89d61a",
     "packages": [
         {
             "name": "alaouy/youtube",
@@ -1677,6 +1677,65 @@
                 }
             ],
             "time": "2020-06-13T08:05:20+00:00"
+        },
+        {
+            "name": "kanuu-io/kanuu-laravel",
+            "version": "v0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kanuu-io/kanuu-laravel.git",
+                "reference": "1970addd411ea87bb7f72669b8b6678ed94d6f3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kanuu-io/kanuu-laravel/zipball/1970addd411ea87bb7f72669b8b6678ed94d6f3c",
+                "reference": "1970addd411ea87bb7f72669b8b6678ed94d6f3c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
+                "illuminate/contracts": "^7.0|^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kanuu\\Laravel\\KanuuServiceProvider"
+                    ],
+                    "aliases": {
+                        "Kanuu": "Kanuu\\Laravel\\Facades\\Kanuu"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kanuu\\Laravel\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Integrate Kanuu to your Laravel application",
+            "homepage": "https://github.com/kanuu-io/kanuu-laravel",
+            "keywords": [
+                "kanuu",
+                "laravel",
+                "paddle",
+                "subscription"
+            ],
+            "support": {
+                "issues": "https://github.com/kanuu-io/kanuu-laravel/issues",
+                "source": "https://github.com/kanuu-io/kanuu-laravel/tree/v0.4.2"
+            },
+            "time": "2021-09-07T15:35:20+00:00"
         },
         {
             "name": "laravel/cashier-paddle",
