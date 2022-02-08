@@ -6,6 +6,12 @@ use Illuminate\Support\Facades\Auth;
 
 trait CanLogin
 {
+    private function loginAsSeriesManager()
+    {
+        Auth::login($user = create_series_manager_user());
+        return $user;
+    }
+
     private function loginAsVideoManager()
     {
         Auth::login($user = create_video_manager_user());

@@ -7,12 +7,16 @@
     "require": {
         "php": "^7.4|^8.0",
         "ext-json": "*",
+        "alaouy/youtube": "^2.2",
         "doctrine/dbal": "^3.1",
         "fruitcake/laravel-cors": "^2.0",
+        "github-php/sponsors": "^0.3.2",
         "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/cashier-paddle": "^1.5",
         "laravel/framework": "^8.54",
         "laravel/jetstream": "^2.4",
         "laravel/sanctum": "^2.11",
+        "laravel/socialite": "^5.4",
         "laravel/telescope": "^4.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
@@ -44,6 +48,9 @@
         }
     },
     "scripts": {
+        "pre-update-cmd": [
+            "Statamic\\Console\\Composer\\Scripts::preUpdateCmd"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -66,7 +73,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
