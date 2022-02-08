@@ -1937,14 +1937,14 @@ select {
 .pt-8 {
 	padding-top: 2rem;
 }
+.pr-10 {
+	padding-right: 2.5rem;
+}
 .pt-16 {
 	padding-top: 4rem;
 }
 .pb-20 {
 	padding-bottom: 5rem;
-}
-.pr-10 {
-	padding-right: 2.5rem;
 }
 .text-left {
 	text-align: left;
