@@ -25,6 +25,11 @@
                             {{ __('Videos Vue') }}
                         </x-jet-nav-link>
                     @endcan
+                    @can('series_manage_index')
+                        <x-jet-nav-link href="/manage/series" :active="request()->routeIs('manage.series')">
+                            {{ __('Series') }}
+                        </x-jet-nav-link>
+                    @endcan
                     @can('users_manage_index')
                         <x-jet-nav-link href="/manage/users" :active="request()->routeIs('manage.users')">
                             {{ __('Users') }}
