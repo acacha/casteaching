@@ -16,7 +16,7 @@
                 @foreach ($series as $serie)
                     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div class="flex-shrink-0">
-                            <img class="h-48 w-full object-cover" src="/storage/series/{{$serie->image}}" alt="">
+                            <img class="h-48 w-full object-cover" src="/storage/{{$serie->image}}" alt="">
                         </div>
                         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                             <div class="flex-1">
