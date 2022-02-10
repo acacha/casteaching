@@ -12,7 +12,7 @@
 
             @can('series_manage_create')
 
-                <x-jet-form-section>
+                <x-jet-form-section data-qa="form_serie_edit">
                     <x-slot name="title">
                         {{ __('Series') }}
                     </x-slot>
@@ -46,7 +46,7 @@
 
                 <x-jet-section-border />
 
-                <x-jet-form-section submit="TODO">
+                <x-jet-form-section data-qa="form_serie_image_edit">
                     <x-slot name="title">
                         {{ __('Imatge de la sèrie') }}
                     </x-slot>
