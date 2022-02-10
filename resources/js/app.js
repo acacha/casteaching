@@ -9,7 +9,7 @@ require('./bootstrap');
 
 window.Alpine = Alpine;
 Alpine.start();
-window.casteaching = casteaching();
+window.casteaching = casteaching({baseUrl:'/api'});
 
 const vueApp = document.querySelector('#app')
 
@@ -18,7 +18,7 @@ if(vueApp){
     window.Vue.component('videos-list', VideosList )
     window.Vue.component('video-form', VideoForm )
     window.Vue.component('status', Status )
-    
+
     const app = new window.Vue({
         el: '#app',
     });
