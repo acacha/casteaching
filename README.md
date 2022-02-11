@@ -47,7 +47,7 @@ https://tubeme.acacha.org/tdd
 - Goncear, Tudor: http://casteaching.tudorgoncear.me/ 
 - Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
 - Pont Lopez, David: Palanka777: http://casteaching.davidpont.me/
-- Rius Rivas, Alba: http://casteaching.albarius.codes/
+- Rius Rivas, Alba: https://casetaching.albarius.alumnedam.me/
 - Tomas Altadill, Axel: AxelTomas99: http://casteaching.axeltomas.codes/
 - Muñoz Zafra, Ferran | http://casteaching.ferranmunozzafra.me/
 - Urs, Gabriel: l3lackJack: http://casteaching.gabriel.alumnedam.me/
