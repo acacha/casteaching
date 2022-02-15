@@ -9,19 +9,21 @@
                     Series
                 </h2>
                 <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                    Les series de casteaching
+                    Las series de casteaching
                 </p>
             </div>
             <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                 @foreach ($series as $serie)
                     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div class="flex-shrink-0">
-                            <img class="h-48 w-full object-cover" src="/storage/{{$serie->image_url}}" alt="">
+                            <a href="{{$serie->url}}" class="block mt-2">
+                                <img class="h-48 w-full object-cover" src="/storage/{{$serie->image_url}}" alt="">
+                            </a>
                         </div>
                         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                             <div class="flex-1">
                                 <p class="text-sm font-medium text-indigo-600">
-                                    <a href="#" class="hover:underline">
+                                    <a href="{{$serie->url}}" class="hover:underline">
                                         Screencasts
                                     </a>
                                 </p>

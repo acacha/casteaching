@@ -15,6 +15,41 @@ class SerieTest extends TestCase
 {
     use RefreshDatabase;
 
+    /** @test */
+    public function series_have_url_linking_to_first_video_serie()
+    {
+        $serie = Serie::create([
+            'title' => 'TDD (Test Driven Development)',
+            'description' => 'Bla bla bla'
+        ]);
+
+        $video = Video::create([
+           'title' => 'Intro to TDD',
+           'description' => 'Bla bla bla',
+           'serie_id' => $serie->id,
+           'url' => 'https://youtu.be/w8j07_DBl_I',
+
+        ]);
+
+
+        $this->assertNotNull($serie->url);
+
+        $this->assertEquals('/videos/' . $video->id, $serie->url);
+    }
+
+    /** @test */
+    public function series_have_url_linking_to_nothing_if_no_videos()
+    {
+        $serie = Serie::create([
+            'title' => 'TDD (Test Driven Development)',
+            'description' => 'Bla bla bla'
+        ]);
+
+        $this->assertNotNull($serie->url);
+
+        $this->assertEquals('#', $serie->url);
+    }
+
 
     /** @test */
     public function serie_have_placeholder_image_when_image_is_null()

@@ -43,15 +43,17 @@ class Serie extends Model
         return optional($this->created_at)->timestamp;
     }
 
-    /**
-     * Get the user's first name.
-     *
-     * @return \Illuminate\Database\Eloquent\Casts\Attribute
-     */
     protected function imageUrl(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $this->image ?? 'series/placeholder.png',
+        );
+    }
+
+    protected function url(): Attribute
+    {
+        return new Attribute(
+            get: fn ($value) => count($this->videos) > 0 ? '/videos/' . $this->videos->first()->id : '#'
         );
     }
 }
