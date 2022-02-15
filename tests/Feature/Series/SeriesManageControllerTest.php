@@ -73,6 +73,7 @@ class SeriesManageControllerTest extends TestCase
         });
 
         $response->assertSee('<form data-qa="form_serie_edit"',false);
+        $response->assertSee('<form data-qa="form_serie_image_edit"',false);
 
         $response->assertSeeText($serie->title);
         $response->assertSeeText($serie->description);

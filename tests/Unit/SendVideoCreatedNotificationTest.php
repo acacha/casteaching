@@ -12,7 +12,7 @@ use Illuminate\Support\Str;
 use Tests\TestCase;
 
 /**
- * @covers SendVideoCreatedNotificationTODO::class
+ * @covers SendVideoCreatedNotification::class
  */
 class SendVideoCreatedNotificationTest extends TestCase
 {
