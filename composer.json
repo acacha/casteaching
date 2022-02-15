@@ -12,6 +12,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "github-php/sponsors": "^0.3.2",
         "guzzlehttp/guzzle": "^7.0.1",
+        "intervention/image": "^2.7",
         "laravel/cashier-paddle": "^1.5",
         "laravel/framework": "^9.0.2",
         "laravel/jetstream": "^2.4",
