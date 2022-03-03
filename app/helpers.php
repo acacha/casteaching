@@ -215,7 +215,8 @@ if (! function_exists('create_sample_videos')) {
         $video2 = Video::create([
             'title' => 'Laravel JetStream',
             'description' => 'Bla bla bla',
-            'url' => 'https://www.youtube.com/embed/zyABmm6Dw64'
+            'url' => 'https://www.youtube.com/embed/zyABmm6Dw64',
+            'published_at' => Carbon::parse('December 13, 2020 8:00pm'),
         ]);
         $video3 = Video::create([
             'title' => 'Ubuntu 101',

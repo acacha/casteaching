@@ -18,40 +18,6 @@ class VideoTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function todo()
-    {
-        $serie = Serie::create([
-            'title' => 'TDD (Test Driven Development)',
-            'description' => 'Bla bla bla',
-            'image' => 'series/placeholder.pnh',
-            'teacher_name' => 'Sergi Tur Badenas',
-            'teacher_photo_url' => 'https://www.gravatar.com/avatar/' . md5('sergiturbadenas@gmail.com')
-        ]);
-
-        $video1 = Video::create([
-            'title' => 'TDD 101',
-            'description' => '# Here description',
-            'url' => 'https://youtu.be/w8j07_DBl_I',
-            'published_at' => Carbon::parse('December 13, 2020 8:00pm'),
-            'previous' => null,
-            'next' => null,
-            'serie_id' => $serie->id
-        ]);
-
-        $video2 = Video::create([
-            'title' => 'TDD 102',
-            'description' => '# Here description',
-            'url' => 'https://youtu.be/w8j07_DBl_I',
-            'published_at' => Carbon::parse('December 13, 2020 8:00pm'),
-            'previous' => null,
-            'next' => null,
-            'serie_id' => $serie->id
-        ]);
-
-        dd($video2->serie?->videos);
-    }
-
-    /** @test */
     public function can_get_formatted_published_at_date()
     {
         // 1 Preparació
