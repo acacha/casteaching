@@ -30,6 +30,7 @@ https://tubeme.acacha.org/tdd
 - Audí Bielsa, Daniel: https://github.com/daudi44/casteaching
 - Avante Caballé, Marc: https://github.com/AvanteCaballe/casteaching
 - Brusca Manchón, Albert: https://github.com/Albert-Brusca/casteaching
+- Casado Pellissa, Sergi: https://github.com/sergicasado/casteaching
 - Goncear, Tudor: https://github.com/tgoncear/casteaching
 - Moreno Giraldo, Jhon: Jhon1348: https://github.com/Jhon1348/casteaching
 - Muñoz Zafra, Ferran | https://github.com/Fmunozzafra/casteaching
@@ -44,6 +45,7 @@ https://tubeme.acacha.org/tdd
 - Audí Bielsa, Daniel: http://casteaching.danielaudibielsa.codes/
 - Avante Caballé, Marc: http://casteaching.marcavante.codes/
 - Brusca Manchón, Albert: http://casteaching.albertbrusca.me/
+- Casado Pellissa, Sergi: http://casteaching.sergicp.me/
 - Goncear, Tudor: http://casteaching.tudorgoncear.me/ 
 - Moreno Giraldo, Jhon: Jhon1348: http://casteaching.jhonmoreno.codes
 - Pont Lopez, David: Palanka777: http://casteaching.davidpont.me/
@@ -52,6 +54,7 @@ https://tubeme.acacha.org/tdd
 - Muñoz Zafra, Ferran | http://casteaching.ferranmunozzafra.me/
 - Urs, Gabriel: l3lackJack: http://casteaching.gabriel.alumnedam.me/
 - Tur Badenas, Sergi: Alumne DAM Prova: https://github.com/AlumneDAMPRova/casteaching
+- 
 
 # Versió de l'aplicació per a mòbils
 
