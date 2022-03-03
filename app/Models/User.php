@@ -93,7 +93,7 @@ class User extends Authenticatable
         $user = User::where('github_id', $githubUser->id)->first();
 
         if ($user) {
-            $user->name = $githubUser->name;
+            $user->name = $githubUser->name || 'Github User';
             $user->github_token = $githubUser->token;
             $user->github_refresh_token = $githubUser->refreshToken;
             $user->github_nickname = $githubUser->nickname;
@@ -111,7 +111,7 @@ class User extends Authenticatable
                 $user->save();
             } else {
                 $user = User::create([
-                    'name' => $githubUser->name,
+                    'name' => $githubUser->name || 'Github User',
                     'email' => $githubUser->email,
                     'password' => Hash::make(Str::random()),
                     'github_id' => $githubUser->id,
