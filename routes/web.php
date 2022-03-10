@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GithubAuthController;
 use App\Http\Controllers\SeriesImagesManageController;
 use App\Http\Controllers\SeriesManageController;
@@ -28,10 +29,7 @@ Route::get('/', [ \App\Http\Controllers\LandingPageController::class,'show']);
 Route::get('/videos/{id}', [ VideosController::class,'show']);
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-
+    Route::get('/dashboard', [ DashboardController::class,'show'])->name('dashboard');
 
     Route::get('/manage/series', [ SeriesManageController::class,'index'])->middleware(['can:series_manage_index'])
         ->name('manage.series');
