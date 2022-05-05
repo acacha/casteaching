@@ -18,6 +18,59 @@ class VideoTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
+    public function can_check_if_video_can_be_displayed()
+    {
+        $video = Video::create([
+            'title' => 'Ubuntu 101',
+            'description' => '# Here description',
+            'url' => 'https://youtu.be/w8j07_DBl_I',
+            'published_at' => Carbon::parse('December 13, 2020 8:00pm')
+        ]);
+
+        $this->assertTrue($video->canBeDisplayed());
+
+        $video->markAsOnlyForSubscribers();
+        $video->refresh();
+
+        $this->assertFalse($video->canBeDisplayed());
+    }
+
+    /** @test */
+    public function a_video_can_need_a_subscription()
+    {
+        $video = Video::create([
+            'title' => 'Ubuntu 101',
+            'description' => '# Here description',
+            'url' => 'https://youtu.be/w8j07_DBl_I',
+            'published_at' => Carbon::parse('December 13, 2020 8:00pm')
+        ]);
+
+        $this->assertNull($video->needs_subscription);
+        // Video needs subscription -> needs_subscription
+        $video->markAsOnlyForSubscribers();
+        $video->refresh();
+        $this->assertNotNull($video->needs_subscription);
+    }
+
+    /** @test */
+    public function can_check_if_a_video_need_subscriber()
+    {
+        $video = Video::create([
+            'title' => 'Ubuntu 101',
+            'description' => '# Here description',
+            'url' => 'https://youtu.be/w8j07_DBl_I',
+            'published_at' => Carbon::parse('December 13, 2020 8:00pm'),
+        ]);
+
+        $this->assertFalse($video->only_for_subscribers);
+
+        $video->markAsOnlyForSubscribers();
+        $video->refresh();
+
+        $this->assertTrue($video->only_for_subscribers);
+    }
+
+    /** @test */
     public function can_get_formatted_published_at_date()
     {
         // 1 Preparació
